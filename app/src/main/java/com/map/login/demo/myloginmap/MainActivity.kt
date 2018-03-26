@@ -1,13 +1,11 @@
 package com.map.login.demo.myloginmap
 
 import android.content.Intent
-import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View;
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import com.map.login.demo.myloginmap.R.id.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -30,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         btnLogin.setOnClickListener(View.OnClickListener() {
                 var status = if
                     (etUser.text.toString().equals("admin") &&
-                            etPassword.text.toString().equals("Password")) "Successful Login Redirecting..." else "Wrong Credentials"
+                            etPassword.text.toString().equals("Password")) "Successful Login..." else "Wrong Credentials"
                     Toast.makeText(this,status, Toast.LENGTH_SHORT).show();
                            // "Successful Redirecting...", Toast.LENGTH_SHORT).show();
 
@@ -44,9 +42,6 @@ class MainActivity : AppCompatActivity() {
             android.os.Process.killProcess(android.os.Process.myPid())
             System.exit(1);
 
-                //if(View() == btnCancel){
-                //    finish()
-                //};
         });
     }
 }
